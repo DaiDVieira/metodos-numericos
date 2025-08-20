@@ -44,10 +44,10 @@ int main(void){
     float e, a, b;
     printf("Digite a precisao desejada: ");
     scanf(" %f", &e);
-    printf("Digite um intervalo (a b): ");
+    printf("Digite um intervalo [a, b] (ex.: 0 3): ");
     scanf(" %f %f", &a, &b);
     while(!bolzano(a, b)){
-        printf("Digite um novo intervalo (a, b): ");
+        printf("Digite um novo intervalo [a, b] (ex.: 0 3): ");
         scanf(" %f %f", &a, &b);
     }
     printf("Ao menos %d iteracoes serao necessarias.\n", numeroIteracoes(a, b, e));

@@ -40,10 +40,10 @@ int main(void){
     float e, a, b;
     printf("Digite a precissao desejada: ");
     scanf(" %f", &e);
-    printf("Digite um intervalo (a b): ");
+    printf("Digite um intervalo [a, b] (ex.: 0 3): ");
     scanf(" %f %f", &a, &b);
     while(!bolzano(a, b)){
-        printf("Digite um novo intervalo (a, b): ");
+        printf("Digite um novo intervalo [a, b] (ex.: 0 3): ");
         scanf(" %f %f", &a, &b);
     }
     falsaPosicao(a, b, e, arq);
