@@ -1,2 +1,7 @@
-*.exe
 .vscode
+*.exe
+*.pdf
+*.R
+*.txt
+*.csv
+graficos
