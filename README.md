@@ -1,6 +1,6 @@
 **SOBRE OS ARQUIVOS**
 
-Os arquivos no corrente diretório implementam os algoritmos implementados na disciplina de Métodos Numéricos Computacionais. São eles:
+Os arquivos no corrente diretório contém os algoritmos implementados na disciplina de Métodos Numéricos Computacionais. São eles:
 - bolzano.c: implemetação do teorema de bolzano e definição da função f(x) = x^2 - 2, que pode ser alterada
 - bolzano.h: arquivo cabeçalho para o teorema de bolzano e definição da função f(x) = x^2 - 2
 - falsa_posicao.c: implementação do método da falsa posição. Gera um arquivo chamado "dados_falsa_posicao.csv" com os valores dos pontos (a, f(a)), (b, f(b)) e (x, f(x))
