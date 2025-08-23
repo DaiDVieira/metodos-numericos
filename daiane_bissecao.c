@@ -1,15 +1,25 @@
+/*
+Método da Bisseção para zeros de funções, por Daiane Dias Vieira
+Métodos Numéricos e Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+Para executar:
+    gcc bissecao.c bolzano.c -o b
+    ./b
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-#include "bolzano.h"
+#include "daiane_bolzano.h"
 
 int numeroIteracoes(float a, float b, float e){
     float n = (log10(fabs(b - a)) - log10(e))/log10(2);
     return (int)ceil(n);
 }
 
-void bisessao(float a, float b, float e, FILE *arq){
+void bisecao(float a, float b, float e, FILE *arq){
     float fa = f(a);
     float fb = f(b);
     float pm, fpm;
@@ -51,7 +61,7 @@ int main(void){
         scanf(" %f %f", &a, &b);
     }
     printf("Ao menos %d iteracoes serao necessarias.\n", numeroIteracoes(a, b, e));
-    bisessao(a, b, e, arq);    
+    bisecao(a, b, e, arq);    
 
     fclose(arq);
     return 0;

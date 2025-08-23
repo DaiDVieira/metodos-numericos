@@ -1,8 +1,18 @@
+/*
+Método da Falsa Posição (das Cordas) para zeros de funções, por Daiane Dias Vieira
+Métodos Numéricos e Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+Para executar:
+    gcc falsa_posicao.c bolzano.c -o f
+    ./f
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-#include "bolzano.h"
+#include "daiane_bolzano.h"
 
 void falsaPosicao(float a, float b, float e, FILE *arq){
     float fa = f(a);

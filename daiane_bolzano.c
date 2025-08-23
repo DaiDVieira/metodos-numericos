@@ -1,10 +1,17 @@
+/*
+Teorema de Bolzano - Arquivo complementar, por Daiane Dias Vieira
+Métodos Numéricos e Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+*/
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <math.h>
-#include "bolzano.h"
+#include "daiane_bolzano.h"
 
 float f(float x){
-    return pow(x, 2) - 2;
+    return pow(x, 3) - sin(x);
 }
 
 bool bolzano(float a, float b){
