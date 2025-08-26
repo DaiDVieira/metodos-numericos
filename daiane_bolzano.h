@@ -3,7 +3,8 @@
 #ifndef DAIANE_BOLZANO_H
 #define DAIANE_BOLZANO_H
 
-float f(float x);
-bool bolzano(float a, float b);
+double f(double x);
+double derivadaDeF(double x);
+bool bolzano(double a, double b);
 
 #endif

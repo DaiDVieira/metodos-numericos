@@ -4,29 +4,28 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc bissecao.c bolzano.c -o b
+    gcc daiane_bissecao.c daiane_bolzano.c -o b
     ./b
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
 #include "daiane_bolzano.h"
 
-int numeroIteracoes(float a, float b, float e){
-    float n = (log10(fabs(b - a)) - log10(e))/log10(2);
+int numeroIteracoes(double a, double b, double e){
+    double n = (log10(fabs(b - a)) - log10(e))/log10(2);
     return (int)ceil(n);
 }
 
-void bisecao(float a, float b, float e, FILE *arq){
-    float fa = f(a);
-    float fb = f(b);
-    float pm, fpm;
+void bissecao(double a, double b, double e, FILE *arq){
+    double fa = f(a);
+    double fb = f(b);
+    double pm, fpm;
     while(fabs(b-a) > e){
         pm = (b+a)/2;
         fpm = f(pm);
-        fprintf(arq,"%lf,%lf,%lf,%lf,%lf,%lf\n", a, b, fa, fb, pm, fpm);
+        fprintf(arq,"%.15lf,%.15lf,%.15lf,%.15lf,%.15lf,%.15lf\n", a, b, fa, fb, pm, fpm);
         if(fabs(fpm) < e){
             break;
         }
@@ -39,7 +38,7 @@ void bisecao(float a, float b, float e, FILE *arq){
             fa = fpm;
         }
     }
-    printf("Ponto medio %f eh solucao %f.\n", pm, fpm);
+    printf("Ponto medio %.15lf eh solucao %.15lf.\n", pm, fpm);
 }
 
 int main(void){
@@ -51,17 +50,17 @@ int main(void){
         return 1;
     }
 
-    float e, a, b;
+    double e, a, b;
     printf("Digite a precisao desejada: ");
-    scanf(" %f", &e);
+    scanf(" %lf", &e);
     printf("Digite um intervalo [a, b] (ex.: 0 3): ");
-    scanf(" %f %f", &a, &b);
+    scanf(" %lf %lf", &a, &b);
     while(!bolzano(a, b)){
         printf("Digite um novo intervalo [a, b] (ex.: 0 3): ");
-        scanf(" %f %f", &a, &b);
+        scanf(" %lf %lf", &a, &b);
     }
     printf("Ao menos %d iteracoes serao necessarias.\n", numeroIteracoes(a, b, e));
-    bisecao(a, b, e, arq);    
+    bissecao(a, b, e, arq);    
 
     fclose(arq);
     return 0;

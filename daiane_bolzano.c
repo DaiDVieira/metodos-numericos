@@ -10,14 +10,18 @@ Santa Maria, 2025
 #include <math.h>
 #include "daiane_bolzano.h"
 
-float f(float x){
-    return pow(x, 3) - sin(x);
+double f(double x){
+    return pow(x, 2) - 2;
 }
 
-bool bolzano(float a, float b){
-    float fa = f(a);
-    float fb = f(b);
-    float mul = f(a)*f(b);
+double derivadaDeF(double x){
+    return 2*x;
+}
+
+bool bolzano(double a, double b){
+    double fa = f(a);
+    double fb = f(b);
+    double mul = f(a)*f(b);
     if (mul < 0){
         printf("Existe raiz de f no intervalo dado.\n");
         return true;

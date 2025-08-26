@@ -4,26 +4,25 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc falsa_posicao.c bolzano.c -o f
+    gcc daiane_falsa_posicao.c daiane_bolzano.c -o f
     ./f
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
 #include "daiane_bolzano.h"
 
-void falsaPosicao(float a, float b, float e, FILE *arq){
-    float fa = f(a);
-    float fb = f(b);
-    float x, fx;
+void falsaPosicao(double a, double b, double e, FILE *arq){
+    double fa = f(a);
+    double fb = f(b);
+    double x, fx;
     int n = 0; //número de iterações
     while(fabs(b-a) > e){
         x = ((a*fb) - (b*fa))/(fb - fa);
         n++;
         fx = f(x);
-        fprintf(arq,"%lf,%lf,%lf,%lf,%lf,%lf\n", a, b, fa, fb, x, fx);
+        fprintf(arq,"%.15lf,%.15lf,%.15lf,%.15lf,%.15lf,%.15lf\n", a, b, fa, fb, x, fx);
         if(fabs(fx) < e)
             break;
         else if((fa*fx) < 0){
@@ -35,7 +34,7 @@ void falsaPosicao(float a, float b, float e, FILE *arq){
             fa = fx;
         }
     }
-    printf("Ponto %f eh solucao %f.\n%d iteracoes foram necessarias\n", x, fx, n);
+    printf("Ponto %.15lf eh solucao %.15lf.\n%d iteracoes foram necessarias\n", x, fx, n);
 }
 
 int main(void){
@@ -47,14 +46,14 @@ int main(void){
         return 1;
     }
 
-    float e, a, b;
-    printf("Digite a precissao desejada: ");
-    scanf(" %f", &e);
+    double e, a, b;
+    printf("Digite a precisao desejada: ");
+    scanf(" %lf", &e);
     printf("Digite um intervalo [a, b] (ex.: 0 3): ");
-    scanf(" %f %f", &a, &b);
+    scanf(" %lf %lf", &a, &b);
     while(!bolzano(a, b)){
         printf("Digite um novo intervalo [a, b] (ex.: 0 3): ");
-        scanf(" %f %f", &a, &b);
+        scanf(" %lf %lf", &a, &b);
     }
     falsaPosicao(a, b, e, arq);
 
