@@ -31,21 +31,6 @@ void newtonRaphson(double xAnt, double e, FILE* arq){
         n++;
     }while(laco);
     
-    /*
-    float fxAnt = f(xAnt);
-    float dxAnt = derivadaDeF(xAnt);
-    float xProx = xAnt - (fxAnt/dxAnt);
-    float fxProx = f(xProx);
-    fprintf(arq,"%f,%f,%f,%f\n", xAnt, xProx, fxAnt, fxProx);
-    while(fabs(xProx - xAnt) > e && fabs(fxProx) > e){
-        xAnt = xProx;
-        fxAnt = f(xAnt);
-        dxAnt = derivadaDeF(xAnt);
-        xProx = xAnt - (fxAnt/dxAnt);
-        fxProx = f(xProx);
-        fprintf(arq,"%f,%f,%f,%f\n", xAnt, xProx, fxAnt, fxProx);
-    }  
-        */
     printf("Ponto %.15lf eh solucao %.15lf.\n%d iteracoes foram necessarias\n", xProx, fxProx, n-1);
 }
 

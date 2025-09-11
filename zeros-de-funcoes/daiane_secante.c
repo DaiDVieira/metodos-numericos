@@ -1,3 +1,13 @@
+/*
+Método de Newton Raphson (das Tangentes) para zeros de funções, por Daiane Dias Vieira
+Métodos Numéricos e Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+Para executar:
+    gcc daiane_secante.c daiane_bolzano.c -o n
+    ./n
+*/
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
