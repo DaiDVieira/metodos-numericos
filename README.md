@@ -1,7 +1,9 @@
 # Métodos Numéricos
 
 O corrente diretório contém os algoritmos implementados em linguagem C para a disciplina de Métodos Numéricos Computacionais. Os tópicos abordados estão organizados nos subdiretórios:
+
 [Zeros de Funções](/zeros-de-funcoes/)
+
 [Sistemas Lineares](/sistemas-lineares/)
 
 **Sobre Arquivos Compartilhados**
@@ -22,25 +24,25 @@ Os algoritmos de zeros de funções geram arquivos CSV para armazenamento de dad
 ## Como executar
 
 ### Zeros de Funções
-- [Método da Bisseção](/zeros-de-funcoes/bissecao.c): 
+- Método da Bisseção: 
 ```
     gcc bissecao.c bolzano.c -o b
     ./b
 ```
 
-- [Método da Falsa Posição (das Cordas)](/zeros-de-funcoes/falsaPosicao.c):
+- Método da Falsa Posição (das Cordas):
 ```
     gcc falsaPosicao.c bolzano.c -o f
     ./f
 ```
 
-- [Método da Newton-Raphson (das Tangentes)](/zeros-de-funcoes/newtonRaphson.c):
+- Método da Newton-Raphson (das Tangentes):
 ```
     gcc newtonRaphson.c bolzano.c -o n
     ./n
 ```
 
-- [Método das Secantes](/zeros-de-funcoes/secante.c):
+- Método das Secantes:
 ```
     gcc secante.c bolzano.c -o s
     ./s
@@ -48,13 +50,13 @@ Os algoritmos de zeros de funções geram arquivos CSV para armazenamento de dad
 
 ### Solução de Sistemas Lineares
 
-- [Retrosubstituição](/sistemas-lineares/retrosubstituicao.c):
+- Retrosubstituição:
 ```
     gcc retrosubstituicao.c matriz.c -o s
     ./s
 ```
 
-- [Eliminação Gaussiana](/sistemas-lineares/eliminacaoGaussiana.c):
+- Eliminação Gaussiana:
 ```
     gcc eliminacaoGaussiana.c matriz.c -o s
     ./s
