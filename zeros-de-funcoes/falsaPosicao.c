@@ -4,14 +4,14 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc daiane_falsa_posicao.c daiane_bolzano.c -o f
+    gcc falsaPosicao.c bolzano.c -o f
     ./f
 */
 
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-#include "daiane_bolzano.h"
+#include "bolzano.h"
 
 void falsaPosicao(double a, double b, double e, FILE *arq){
     double fa = f(a);

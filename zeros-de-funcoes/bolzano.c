@@ -8,7 +8,7 @@ Santa Maria, 2025
 #include <stdbool.h>
 #include <stdio.h>
 #include <math.h>
-#include "daiane_bolzano.h"
+#include "bolzano.h"
 
 double f(double x){
     return pow(x, 2) - 2;

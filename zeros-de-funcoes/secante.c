@@ -4,14 +4,14 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc daiane_secante.c daiane_bolzano.c -o n
+    gcc secante.c bolzano.c -o s
     ./n
 */
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-#include "daiane_bolzano.h"
+#include "bolzano.h"
 
 void secante(double x0, double x1, double e, FILE* arq){
     double xProx, xAtual = x1, xAnt = x0, fxAtual, fxAnt, fxProx;

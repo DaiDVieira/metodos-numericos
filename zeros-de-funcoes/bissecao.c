@@ -4,14 +4,14 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc daiane_bissecao.c daiane_bolzano.c -o b
+    gcc bissecao.c bolzano.c -o b
     ./b
 */
 
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-#include "daiane_bolzano.h"
+#include "bolzano.h"
 
 int numeroIteracoes(double a, double b, double e){
     double n = (log10(fabs(b - a)) - log10(e))/log10(2);

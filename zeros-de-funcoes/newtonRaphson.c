@@ -4,14 +4,14 @@ Métodos Numéricos e Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc daiane_newton_raphson.c daiane_bolzano.c -o n
+    gcc newtonRaphson.c bolzano.c -o n
     ./n
 */
 
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-#include "daiane_bolzano.h"
+#include "bolzano.h"
 
 void newtonRaphson(double xAnt, double e, FILE* arq){
     double fxAtual, dxAtual, xProx, fxProx;
