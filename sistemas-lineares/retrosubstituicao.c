@@ -1,3 +1,13 @@
+/*
+Método de Retrosubstituição para sistemas lineares, por Daiane D. Vieira
+Métodos Numéricos Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+Para executar:
+    gcc retrosubstituicao.c matriz.c -o s
+    ./s
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "matriz.h"
@@ -18,7 +28,7 @@ double* resolveSistema(double** A, int n, double* b){
 void imprimeSolucao(double* x, int n){
     printf("Solucao do sistema linear:\n");
     for(int i = 0; i < n; i++){
-        printf("%.3lf ", x[i]);
+        printf("%.8lf ", x[i]);
     }
 }
 
@@ -27,11 +37,13 @@ int main(void){
     leDimensaoMatriz(&lin, &col);
 
     double** A = preencheMatrizEscalonada(lin, col);
-    double* b = preencheVetorB(lin);
+    double* b = alocaVetor(lin);
+    b = preencheVetorB(lin, b);
     double* x = resolveSistema(A, lin, b);
     imprimeSolucao(x, lin);
 
-    liberaEstruturas(A, lin, b);
+    liberaMatriz(A, lin);
+    free(b);
     free(x);
 
     return 0;

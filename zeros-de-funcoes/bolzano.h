@@ -1,4 +1,4 @@
-//arquivo cabeçalho para o teorema de bolzano e definição da função f(x) = x^2 - 2, que pode ser alterada
+//arquivo cabeçalho para o teorema de bolzano e definição da função f(x)
 
 #ifndef BOLZANO_H
 #define BOLZANO_H

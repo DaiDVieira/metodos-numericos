@@ -1,6 +1,6 @@
 /*
-Teorema de Bolzano - Arquivo complementar, por Daiane Dias Vieira
-Métodos Numéricos e Computacionais - MTM224
+Teorema de Bolzano - Arquivo complementar, por Daiane D. Vieira
+Métodos Numéricos Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 */

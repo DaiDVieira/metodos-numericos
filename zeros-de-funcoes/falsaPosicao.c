@@ -1,6 +1,6 @@
 /*
-Método da Falsa Posição (das Cordas) para zeros de funções, por Daiane Dias Vieira
-Métodos Numéricos e Computacionais - MTM224
+Método da Falsa Posição (das Cordas) para zeros de funções, por Daiane D. Vieira
+Métodos Numéricos Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:

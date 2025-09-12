@@ -1,3 +1,13 @@
+/*
+Método da Eliminação Gaussiana para sistemas lineares, por Daiane D. Vieira
+Métodos Numéricos Computacionais - MTM224
+Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
+Santa Maria, 2025
+Para executar:
+    gcc eliminacaoGaussiana.c matriz.c -o s
+    ./s
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "matriz.h"
@@ -20,14 +30,13 @@ int main(void){
     leDimensaoMatriz(&lin, &col);
     col++; //adiciona coluna do vetor b para matriz ampliada
 
-    double** A = preencheMatrizCompleta(lin, col);
-    double* b = preencheVetorB(lin);
-    A = preencheMatrizAmpliada(A, b, lin, col);
+    double** A = alocaMatriz(lin, col);
+    A = preencheMatrizAmpliada(A, lin, col);
 
     A = eliminacaoGaussiana(A, lin, col);
     imprimeMatrizGaussiana(A, lin, col);
 
-    liberaEstruturas(A, lin, b);
+    liberaMatriz(A, lin);
 
     return 0;
 }
