@@ -51,13 +51,20 @@ double** preencheMatrizEscalonada(int lin, int col){
     return A;
 }
 
-double* preencheVetorB(int lin, double* b){
-    printf("\nDigite os valores do vetor b\n");
+double* preencheVetor(int lin, double* v, char c){
+    printf("\nDigite os valores do vetor %c\n", c);
     for(int i = 0; i < lin; i++){
-        printf("b%d: ", i+1);
-        scanf(" %lf", &b[i]);
+        printf("%c%d: ", c, i+1);
+        scanf(" %lf", &v[i]);
     }
-    return b;
+    return v;
+}
+
+double* inicializaVetorComZero(int lin, double* v){
+    for(int i = 0; i < lin; i++){
+        v[i] = 0;
+    }
+    return v;
 }
 
 void liberaMatriz(double** A, int lin){
@@ -67,39 +74,17 @@ void liberaMatriz(double** A, int lin){
     free(A);
 }
 
-//Eliminação Gaussina
+//Eliminação Gaussiana
 
 double** preencheMatrizA(double** A, int lin, int col){
     printf("\nDigite os valores das linhas da matriz A:\n");
     for(int i = 0; i < lin; i++){
         printf("Linha %d:\n", i+1);
-        for(int j = 0; j < col-1; j++){
+        for(int j = 0; j < col; j++){
             printf("A[%d][%d]: ", i+1, j+1);
             scanf(" %lf", &A[i][j]);
         }
         printf("\n");
     }
     return A;
-}
-
-double** preencheMatrizAmpliada(double** A, int lin, int col){
-    A = preencheMatrizA(A, lin, col);
-    printf("\nDigite os valores do vetor b\n");
-    for(int i = 0; i < lin; i++){
-        printf("b%d: ", i+1);
-        scanf(" %lf", &A[i][col-1]);
-    }
-    return A;
-}
-
-void imprimeMatrizGaussiana(double** A, int lin, int col){
-    printf("Matriz A escalonada e vetor b usando o metodo da Eliminacao Gaussiana:\n");
-    for(int i = 0; i < lin; i++){
-        for(int j = 0; j < col; j++){
-            if(j == col - 1)
-                printf(" | ");
-            printf("%.8lf ", A[i][j]);
-        }
-        printf("\n");
-    }
 }
