@@ -4,7 +4,7 @@ Métodos Numéricos Computacionais - MTM224
 Ciência da Computação, Universidade Federal de Santa Maria (UFSM)
 Santa Maria, 2025
 Para executar:
-    gcc eliminacaoGaussiana.c matriz.c -o s
+    gcc gauss.c matriz.c -o s
     ./s
 */
 
@@ -40,11 +40,11 @@ void imprimeMatrizGaussiana(double** A, int lin, int col){
     printf("\nMatriz A escalonada e vetor b usando o metodo da Eliminacao Gaussiana:\n");
     for(int i = 0; i < lin; i++){
         for(int j = 0; j < col; j++){
-            if(fabs(A[i][j]) < 1e-9) 
+            if(fabs(A[i][j]) < 1e-15) 
                 A[i][j] = 0.0;
             if(j == col - 1)
                 printf(" | ");
-            printf("%.4lf ", A[i][j]);
+            printf("%.15lf ", A[i][j]);
         }
         printf("\n");
     }

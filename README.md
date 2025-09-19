@@ -4,7 +4,7 @@ Este diretório contém os algoritmos implementados em linguagem C para a discip
 
 [Zeros de Funções](/zeros-de-funcoes/)
 
-[Sistemas Lineares](/sistemas-lineares/)
+[Sistemas Lineares](/sistemas-lineares/) [EM CONSTRUÇÃO]
 
 **Arquivos Compartilhados**
 
